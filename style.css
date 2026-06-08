@@ -76,7 +76,9 @@ select,
   font-style: normal;
 }
 
-/* baggrundsfarve */
+/* generelle*/
+
+/*baggrundsfarve */
 body {
   background-color: var(--color-bg);
 }
@@ -142,6 +144,7 @@ header {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*projekter teaser */
@@ -167,6 +170,7 @@ header {
 .indexgrid_1-2 h2 {
   color: var(--color-text);
   margin-top: 20px;
+  justify-self: left;
 }
 
 .indexgrid_1-2 p {
@@ -187,16 +191,246 @@ header {
   font-weight: normal;
 }
 
-/*** footer ***/
+/******************* Om mig s. 2 *****************************/
+
+/* overskrifter */
+.om-overskrifter {
+  background-color: var(--color-red);
+  padding-block: 100px;
+  font-family: var(--font-h1-family);
+  text-transform: uppercase;
+  margin-block: 30px;
+}
+
+.om-overskrifter h1,
+h2 {
+  font-weight: normal;
+  color: white;
+  justify-self: center;
+}
+
+.om-overskrifter h1 {
+  font-size: 48px;
+}
+
+.om-overskrifter h2 {
+  padding-left: 180px;
+  font-size: 30px;
+}
+
+/* portrætbillede */
+.om-img {
+  width: 80%;
+  margin: 50px;
+}
+
+/* om mig afsnit */
+.om-info {
+  margin-inline: 50px;
+}
+
+.om-info h3 {
+  margin-block: 50px 20px;
+  color: var(--color-text);
+  font-size: 20px;
+}
+
+.omafsnitknapper {
+  justify-items: center;
+  margin-block: 40px 100px;
+}
+/* styling af hver knap*/
+.kontaktknap,
+.projekterknap {
+  display: inline-block;
+  background: var(--color-red);
+  color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* uddanelses og erhvervserfaring afsnit*/
+
+.om-udd {
+  background-color: var(--color-red);
+  margin-inline: 10px;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.om-udd h2 {
+  font-family: Inter;
+  font-size: 30px;
+}
+
+/* .footerline {
+  height: 20px;
+  width: 2px;
+  color: white;
+  justify-self: center;
+} */
+.grid_1-1 {
+  margin-top: 50px;
+  margin-inline: 50px;
+  gap: 30px;
+  color: white;
+}
+
+.grid_1-1 li {
+  margin-block: 20px;
+  width: 95%;
+}
+
+/** lært på 1. semester afsnit */
+.semester-info {
+  text-align: center;
+  color: var(--color-text);
+  margin-inline: 50px;
+  margin-bottom: 50px;
+}
+
+.semester-info h2 {
+  color: var(--color-text);
+  font-size: 36px;
+  margin-block: 90px 30px;
+}
+
+/* mine kompetenxer */
+.kompetencer h2 {
+  text-align: center;
+  color: var(--color-text);
+  font-size: 36px;
+  margin-top: 90px;
+}
+
+.grid_1-1-1-1-1 div {
+  background-color: var(--color-red);
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  margin-inline-start: 5px;
+  margin-top: 20px;
+}
+
+.grid_1-1-1-1-1 p {
+  color: white;
+  font-size: 12px;
+}
+
+.cirkel {
+  width: 200px;
+  aspect-ratio: 1/1;
+
+  background-color: var(--color-red);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.1;
+}
+
+/***************** mine projekter s. 3 *******************/
+.projekthero {
+  position: relative;
+  min-height: 280px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.projekthero h1 {
+  position: relative;
+  z-index: 2;
+  font-family: Georgia, serif;
+  font-size: 72px;
+  line-height: 0.9;
+  font-weight: 400;
+}
+.circle {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: white;
+  border-radius: 50%;
+  right: -80px;
+  top: 35px;
+  z-index: 1;
+}
+
+.mineprojekter {
+  padding: 20px;
+}
+
+.mineprojekter h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--color-text);
+}
+
+.projekt-kort {
+  background: var(--color-red);
+  margin-block: 40px;
+  padding: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-inline: 50px;
+  padding-inline: 20px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.projekt-kort p,
+.projekt-kort h3 {
+  font-family: Inter;
+  color: white;
+  margin-inline: 20px;
+}
+
+.projekt-kort img {
+  width: 90%;
+  display: block;
+  justify-self: center;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+.projekt-kort h3 {
+  font-size: 18px;
+  margin-bottom: 14px;
+  font-weight: normal;
+}
+
+.projekt-kort p {
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.projekt-kort a {
+  color: white;
+  font-size: 12px;
+  display: block;
+  text-align: right;
+}
+/******************* footer *****************************/
 
 footer {
   background-color: var(--color-red);
-  margin-top: 300px;
   padding-inline: 5px;
   padding-block: 30px;
   font-family: Inter;
+}
+
+footer p {
   color: white;
-  font-weight: 100px;
 }
 
 .logofooter {
@@ -207,6 +441,7 @@ footer {
 
 .footer-sektion h3 {
   margin-bottom: 10px;
+  color: white;
 }
 
 .kontaktoplysninger a {

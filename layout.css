@@ -16,17 +16,50 @@ header {
 
 /**************** Menu ***************/
 
+/*************** om mig s. 2 ***************/
+
+/* om mig afsnit */
+.omafsnitknapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* uddannelses og erhvervserfaring */
+.grid_1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.erhverv {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.uddannelse {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+/* kompetencer */
+.grid_1-1-1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  justify-items: center;
+}
+
 /*********** footer *******************/
 
 .footer-sektion {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .medierikoner {
   display: flex;
-  flex-direction: row;
+  gap: 8px;
 }
 
 /************************** desktop **************************/
