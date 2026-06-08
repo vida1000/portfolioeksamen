@@ -1,0 +1,44 @@
+:root {
+  /*  Margins */
+  --margin-head-bottom: 5px;
+  --margin-inline: 30px;
+
+  /* baggrundsfarve */
+  --color-bg: #add1e9;
+
+  /* bordeaux farve */
+  --color-red: #7a0506;
+
+  /* Global menu */
+  --color-menu-bg: #ffffff;
+
+  /* cta knapper */
+  --cta-weight: bold;
+  --cta-text-transform: uppercase;
+
+  /* Headlines (size)*/
+  --font-h1-size: 280px;
+  --font-h2-size: 64px;
+  --font-h3-size: 48px;
+
+  /* Headlines (size)*/
+  --font-h1-family: Hedvig Letters Serif;
+  --font-h2-family: Inter;
+  --font-h3-family: Inter;
+
+  /* Headlines (color) */
+  --color-headline-bg: #7a0506;
+
+  /* Tekst */
+  --color-text: #7a0506;
+  --font-text-family: Inter;
+
+  /* knapper radius */
+  --btn-radius: 10px;
+
+  /* favicon farve */
+  --color-favicon: #000000;
+
+  /* logo farve */
+  --color-logo: #7a0506;
+}
