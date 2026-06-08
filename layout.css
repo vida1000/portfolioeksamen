@@ -9,11 +9,6 @@ header {
   display: flex;
 }
 
-.logoimg {
-  width: 77px;
-  height: 46px;
-}
-
 /**************** Menu ***************/
 
 /*************** om mig s. 2 ***************/
@@ -55,6 +50,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 20%;
 }
 
 .medierikoner {

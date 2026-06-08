@@ -101,8 +101,8 @@ header {
   height: 60px;
 }
 .logo-btn img {
-  width: 45px;
-  height: 27px;
+  width: 4rem;
+  height: auto;
   margin: 15px;
 }
 
@@ -377,12 +377,6 @@ nav.active .menu a {
   text-align: center;
 }
 
-/* .footerline {
-  height: 20px;
-  width: 2px;
-  color: white;
-  justify-self: center;
-} */
 .grid_1-1 {
   margin-top: 50px;
   margin-inline: 50px;
@@ -393,6 +387,11 @@ nav.active .menu a {
 .grid_1-1 li {
   margin-block: 20px;
   width: 95%;
+}
+
+.grid_1-1 ul {
+  justify-self: center;
+  align-items: top;
 }
 
 /** lært på 1. semester afsnit */
@@ -409,12 +408,56 @@ nav.active .menu a {
   margin-block: 90px 30px;
 }
 
-/* mine kompetenxer */
+/*  kompetencer */
+
+.kompetencer {
+  padding: 4rem 1.5rem;
+}
+
+.kompetencer h2 {
+  text-align: center;
+  color: var(--color-text);
+  font-size: 2.25rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.grid_1-1-1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.cirkel {
+  width: 140px;
+  aspect-ratio: 1 / 1;
+
+  background-color: var(--color-red);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 1rem;
+}
+
+.cirkel p {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* mine kompetenxer
 .kompetencer h2 {
   text-align: center;
   color: var(--color-text);
   font-size: 36px;
   margin-top: 90px;
+  
 }
 
 .grid_1-1-1-1-1 div {
@@ -446,7 +489,7 @@ nav.active .menu a {
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.1;
-}
+} */
 
 /***************** mine projekter s. 3 *******************/
 .projekthero {
@@ -776,7 +819,8 @@ footer p {
 
   .ommigteaser p,
   .indexgrid_1-2 p,
-  .om-info p {
+  .om-info p,
+  .semester-info p {
     font-size: 24px;
     font-family: var(--font-text-family);
   }
@@ -784,7 +828,7 @@ footer p {
   .ommigteaser h2,
   .indexgrid_1-2 h2,
   .om-info h3,
-  .om-udd h2 {
+  .semester-info h2 {
     font-size: 36px;
     font-family: var(--font-text-family);
   }
@@ -845,5 +889,50 @@ footer p {
     margin-inline: 70px;
     padding: 50px;
     justify-content: center;
+  }
+
+  .om-udd {
+    font-size: 20px;
+    font-family: var(--font-text-family);
+  }
+  .om-udd h2 {
+    text-transform: uppercase;
+    font-size: 64px;
+    font-weight: 400;
+  }
+
+  /* semester */
+
+  .semester-info {
+    margin-inline: 12%;
+    margin-block: 10%;
+  }
+
+  .semester-info h2 {
+    margin-bottom: 50px;
+  }
+
+  /*** kompetencer ***/
+  .kompetencer {
+    padding: 8rem 4rem;
+  }
+
+  .kompetencer h2 {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .grid_1-1-1-1-1 {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+
+  .cirkel {
+    width: 230px;
+    padding: 2rem;
+  }
+
+  .cirkel p {
+    font-size: 1.7rem;
   }
 }
