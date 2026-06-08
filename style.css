@@ -100,6 +100,101 @@ header {
   margin: 15px;
 }
 
+/******************* menu ********************/
+.menu {
+  display: none;
+  list-style: none;
+}
+
+.menu li {
+  margin: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  font-weight: bold;
+}
+
+/******************************** Burger menu **************************/
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger {
+  /*størrelsen på burgermenuikonet*/
+  width: 30px;
+  height: 20px;
+  cursor: pointer; /*musen bliver til en hånd*/
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.burger .line {
+  /* stregerne der danner ikonet*/
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-red);
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+.burger {
+  /*gør at der ikke er kant og baggrund på ikonet*/
+  display: block;
+  background-color: transparent;
+  border: 0;
+}
+/* gør at krydset folder sig ud samt hastigheden på det*/
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  transition: 0.2s linear;
+}
+
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+  transition: 0.15s linear;
+}
+
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  transition: 0.2s linear;
+}
+/*selve menuboksen der folder sig ud*/
+nav.active .menu {
+  display: block;
+  background-color: var(--color-bg);
+  position: absolute;
+  top: 0; /* hvor langt nede skal starte*/
+  left: 50%; /*størrelse*/
+  border: 2px solid var(--color-red);
+
+  width: 100%; /* mindre boks */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav.active .menu li {
+  margin: 10px 20px;
+}
+
+nav.active .menu a {
+  font-size: 20px;
+}
+
 /************* Forside ***************/
 
 /* hero sektion*/
