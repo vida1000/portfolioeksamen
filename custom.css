@@ -19,7 +19,7 @@
   /* Headlines (size)*/
   --font-h1-size: 280px;
   --font-h2-size: 64px;
-  --font-h3-size: 48px;
+  --font-h3-size: 24px;
 
   /* Headlines (size)*/
   --font-h1-family: Hedvig Letters Serif;
@@ -32,6 +32,7 @@
   /* Tekst */
   --color-text: #7a0506;
   --font-text-family: Inter;
+  --font-text-size: 16px;
 
   /* knapper radius */
   --btn-radius: 10px;

@@ -5,6 +5,7 @@
 header {
   position: sticky; /*så den sidder fast*/
   top: 0; /*den sticker fra top 0*/
+  z-index: 1;
   display: flex;
 }
 
@@ -13,28 +14,7 @@ header {
   height: 46px;
 }
 
-/**************** Menu ****************************/
-
-/***************** forside ********************/
-
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 40px;
-  max-width: 900px;
-  position: relative;
-}
-
-/* stor overskrift */
-.indexoverskrift {
-  grid-column: 1/-1;
-}
-
-/* billede */
-.indexvilma {
-  grid-column: 2;
-  grid-row: 2;
-}
+/**************** Menu ***************/
 
 /*********** footer *******************/
 
@@ -59,7 +39,42 @@ header {
     align-items: center;
   }
 
-  /********* forside *************/
+  /***************** forside ********************/
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* stor overskrift */
+  .indexoverskrift {
+    grid-column: 1/-1;
+  }
+
+  /***** om mig teaser ******/
+  .ommigteaser {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* billede */
+
+  .indexvilma img {
+    width: clamp(250px, 40vw, 520px);
+    height: auto;
+  }
+
+  .indexvilma {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: -80px;
+    margin-right: 0px;
+    width: 100%;
+  }
+
   /*teaser projekter */
 
   .indexgrid_1-2 {
