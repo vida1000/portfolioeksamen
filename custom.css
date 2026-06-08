@@ -17,7 +17,7 @@
   --cta-text-transform: uppercase;
 
   /* Headlines (size)*/
-  --font-h1-size: 280px;
+  --font-h1-size: clamp(6rem, 16.5vw, 17.5rem);
   --font-h2-size: 64px;
   --font-h3-size: 24px;
 

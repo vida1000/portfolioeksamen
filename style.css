@@ -89,6 +89,12 @@ body p {
   font-size: var(--font-text-size);
 }
 
+body h2,
+h3,
+a {
+  font-family: var(--font-text-family);
+}
+
 /********* header *******************/
 header {
   background-color: var(--color-bg);
@@ -140,7 +146,7 @@ nav {
   height: 20px;
   cursor: pointer; /*musen bliver til en hånd*/
   margin-left: auto;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .burger .line {
@@ -180,10 +186,10 @@ nav.active .menu {
   background-color: var(--color-bg);
   position: absolute;
   top: 0; /* hvor langt nede skal starte*/
-  left: 50%; /*størrelse*/
   border: 2px solid var(--color-red);
-
-  width: 100%; /* mindre boks */
+  /* størrelsen på boksen */
+  width: 50%;
+  right: 0;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -199,33 +205,38 @@ nav.active .menu a {
 
 /* hero sektion*/
 .indexoverskrift {
+  position: relative;
   margin-top: 20px;
   font-family: var(--font-h1-family);
-  font-size: clamp(5.5rem, 14vw, 10rem);
+  font-size: clamp(5rem, 14vw, 17.5rem);
   line-height: 0.75;
   color: var(--color-headline-bg);
-  letter-spacing: -2.3%;
+  letter-spacing: 2%;
+
+  z-index: 3;
 }
 
 .indexvilma p {
   margin-top: 5px;
+  font-size: 24px;
+  font-weight: 200;
 }
 
 .indexvilma {
   width: 60%;
   justify-self: right;
-  margin-top: -19%;
+  margin-top: -12%;
 }
 
 /* om mig sektion */
 
 .ommigteaser {
   font-family: var(--font-text-family);
-  margin-block: 50px 100px;
-  margin-inline: 20px;
+  margin-block: 60px 100px;
+  margin-inline: 80px;
 }
 .ommigteaser h2 {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: var(--color-text);
 }
 .ommigteaser p {
@@ -257,9 +268,13 @@ nav.active .menu a {
   padding: 25px;
 }
 
-.teaserprojektimg {
-  border: 1px solid var(--color-red);
+.indexgrid_1-2 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  border: 1px solid var(--color-red);
 }
 
 .indexgrid_1-2 h2 {
@@ -305,12 +320,12 @@ nav.active .menu a {
 }
 
 .om-overskrifter h1 {
-  font-size: 48px;
+  font-size: clamp(3rem, 8vw, 8.8rem);
 }
 
 .om-overskrifter h2 {
   padding-left: 180px;
-  font-size: 30px;
+  font-size: clamp(1.875rem, 5vw, 6rem);
 }
 
 /* portrætbillede */
@@ -327,7 +342,7 @@ nav.active .menu a {
 .om-info h3 {
   margin-block: 50px 20px;
   color: var(--color-text);
-  font-size: 20px;
+  font-size: 26px;
 }
 
 .omafsnitknapper {
@@ -350,14 +365,16 @@ nav.active .menu a {
 
 .om-udd {
   background-color: var(--color-red);
-  margin-inline: 10px;
+  margin-inline: 1px;
   padding-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .om-udd h2 {
   font-family: Inter;
-  font-size: 30px;
+  font-size: 26px;
+  color: white;
+  text-align: center;
 }
 
 /* .footerline {
@@ -509,12 +526,176 @@ nav.active .menu a {
   margin-bottom: 25px;
 }
 
-.projekt-kort a {
+.projekt-kort button {
+  background: none;
+  border: none;
+  padding: 0;
   color: white;
-  font-size: 12px;
-  display: block;
-  text-align: right;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  justify-self: end;
+  transition: opacity 0.2s;
 }
+
+.projekt-kort button:hover {
+  opacity: 0.7;
+}
+
+/****** pop over på forsiden ****/
+
+[popover] {
+  padding: 1rem;
+  margin-top: 50px;
+  max-height: 80%;
+  max-width: 600px;
+  width: 80%;
+
+  transition: 1s allow-discrete;
+  opacity: 0;
+  rotate: 360deg;
+  justify-self: center;
+}
+
+[popover] button {
+  position: sticky;
+  top: 0;
+  justify-self: end;
+  color: var(--color-text);
+}
+
+:popover-open {
+  display: grid;
+  opacity: 1;
+  rotate: none;
+}
+
+::backdrop {
+  backdrop-filter: blur(10px);
+}
+
+@starting-style {
+  :popover-open {
+    opacity: 0;
+    rotate: 360deg;
+  }
+}
+
+/**** styling af åbne artikler ********************/
+
+/* projekt 2*/
+
+#projekt-kort2_popover {
+  background-color: var(--color-bg);
+}
+
+#projekt-kort2_popover h1 {
+  font-size: 36px;
+  font-family: var(--font-h1-family);
+  color: var(--color-text);
+  margin-bottom: 30px;
+}
+
+#projekt-kort2_popover h2 {
+  text-align: left;
+}
+
+#projekt-kort2_popover p {
+  line-height: 25px;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+/* projekt 3*/
+
+#projekt-kort3_popover {
+  background-color: var(--color-bg);
+}
+
+#projekt-kort3_popover h1 {
+  font-size: 36px;
+  font-family: var(--font-h1-family);
+  color: var(--color-text);
+  margin-bottom: 30px;
+}
+
+#projekt-kort3_popover h2 {
+  text-align: left;
+}
+
+#projekt-kort3_popover p {
+  line-height: 25px;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+/* projekt 4*/
+
+#projekt-kort4_popover {
+  background-color: var(--color-bg);
+}
+
+#projekt-kort4_popover h1 {
+  font-size: 36px;
+  font-family: var(--font-h1-family);
+  color: var(--color-text);
+  margin-bottom: 30px;
+}
+
+#projekt-kort4_popover h2 {
+  text-align: left;
+}
+
+#projekt-kort4_popover p {
+  line-height: 25px;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+/* projekt 5*/
+
+#projekt-kort5_popover {
+  background-color: var(--color-bg);
+}
+
+#projekt-kort5_popover h1 {
+  font-size: 36px;
+  font-family: var(--font-h1-family);
+  color: var(--color-text);
+  margin-bottom: 30px;
+}
+
+#projekt-kort5_popover h2 {
+  text-align: left;
+}
+
+#projekt-kort5_popover p {
+  line-height: 25px;
+  color: var(--color-text);
+  font-size: 16px;
+}
+
+/*************************** scroll funktioner ********************************/
+
+/* scroll i toppen*/
+html::before {
+  content: "";
+  inset: 0; /*indsætter noget tilfældigt og giver det en farve*/
+  position: fixed;
+  background-color: var(--color-red);
+  block-size: 4px; /*højden*/
+  animation: scroll-line linear both 2s;
+  animation-timeline: scroll();
+  transform-origin: 0 0;
+  z-index: 1000;
+}
+@keyframes scroll-line {
+  from {
+    scale: 0 1; /* vokser 0 i højden og 1 i siderne*/
+  }
+}
+
+/**********************************************************/
 /******************* footer *****************************/
 
 footer {
@@ -522,6 +703,7 @@ footer {
   padding-inline: 5px;
   padding-block: 30px;
   font-family: Inter;
+  margin-top: 130px;
 }
 
 footer p {
@@ -543,4 +725,125 @@ footer p {
 .kontaktoplysninger a {
   text-decoration: none;
   color: white;
+}
+
+/*************************************************************************/
+/************************** desktop ********************************************/
+
+@media (min-width: 1200px) {
+  /* menu */
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  /***************** forside ********************/
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* stor overskrift */
+  .indexoverskrift {
+    grid-column: 1/-1;
+    font-size: var(--font-h1-size);
+    max-width: 1200px;
+    letter-spacing: 2%;
+  }
+
+  .indexvilma {
+    grid-column: 2;
+    width: 100%;
+    height: auto;
+    margin-top: -36%;
+    right: 0;
+  }
+
+  .indexvilma p {
+    font-size: 35px;
+  }
+  /***** om mig teaser ******/
+  .ommigteaser {
+    grid-column: 1;
+    grid-row: 3;
+    margin-inline: 50px;
+    margin-block: -85px 100px;
+  }
+
+  .ommigteaser p,
+  .indexgrid_1-2 p,
+  .om-info p {
+    font-size: 24px;
+    font-family: var(--font-text-family);
+  }
+
+  .ommigteaser h2,
+  .indexgrid_1-2 h2,
+  .om-info h3,
+  .om-udd h2 {
+    font-size: 36px;
+    font-family: var(--font-text-family);
+  }
+
+  /*teaser projekter */
+
+  .indexgrid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1200px;
+    height: 430px;
+    gap: 50px;
+  }
+
+  .indexgrid_1-2 img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 1px solid var(--color-red);
+  }
+
+  /************************************************************************** Om mig s. 2 desktop ******************************************************************/
+
+  .omafsnit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+  }
+  .ommigteaser a,
+  .indexprojektknap,
+  .kontaktknap,
+  .projekterknap {
+    padding: 10px 65px;
+    font-size: 20px;
+    transition: all 0.1s ease;
+  }
+
+  .kontaktknap,
+  .projekterknap {
+    margin-top: 50px;
+  }
+
+  .kontaktknap:hover,
+  .ommigteaser a:hover,
+  .indexprojektknap:hover,
+  .projekterknap:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #7a0000;
+  }
+
+  /* uddannelse og erfaring afsnit */
+
+  .om-udd {
+    margin-block: 100px;
+    margin-inline: 70px;
+    padding: 50px;
+    justify-content: center;
+  }
 }
