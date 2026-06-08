@@ -203,7 +203,7 @@ header {
 }
 
 .om-overskrifter h1,
-h2 {
+.om-overskrifter h2 {
   font-weight: normal;
   color: white;
   justify-self: center;
@@ -339,7 +339,7 @@ h2 {
 /***************** mine projekter s. 3 *******************/
 .projekthero {
   position: relative;
-  min-height: 280px;
+  min-height: 300px;
   padding: 20px;
   overflow: hidden;
 }
@@ -347,19 +347,18 @@ h2 {
 .projekthero h1 {
   position: relative;
   z-index: 2;
-  font-family: Georgia, serif;
-  font-size: 72px;
+  font-family: var(--font-h1-family);
+  font-size: 150px;
   line-height: 0.9;
-  font-weight: 400;
+  color: var(--color-text);
 }
 .circle {
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  aspect-ratio: 1 / 1;
   background: white;
   border-radius: 50%;
   right: -80px;
-  top: 35px;
   z-index: 1;
 }
 
@@ -369,10 +368,11 @@ h2 {
 
 .mineprojekter h2 {
   text-align: center;
-  font-size: 22px;
+  font-size: 32px;
   margin-bottom: 10px;
   font-weight: bold;
   color: var(--color-text);
+  margin-top: 50px;
 }
 
 .projekt-kort {
@@ -405,7 +405,7 @@ h2 {
 .projekt-kort h3 {
   font-size: 18px;
   margin-bottom: 14px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .projekt-kort p {
@@ -431,6 +431,7 @@ footer {
 
 footer p {
   color: white;
+  font-size: 20;
 }
 
 .logofooter {
