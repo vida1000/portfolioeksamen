@@ -324,6 +324,7 @@ nav.active .menu a {
 
 .om-overskrifter h1 {
   font-size: clamp(3rem, 8vw, 8.8rem);
+  padding-left: 5px;
 }
 
 .om-overskrifter h2 {
@@ -351,6 +352,7 @@ nav.active .menu a {
 .omafsnitknapper {
   justify-items: center;
   margin-block: 40px 100px;
+  gap: 5px;
 }
 /* styling af hver knap*/
 .kontaktknap,
@@ -761,6 +763,125 @@ footer {
 .kontaktoplysninger a {
   text-decoration: none;
   color: white;
+}
+
+/******** animationer ***************/
+
+/********************* animation index side */
+
+/* slide in hero sektion */
+.indexoverskrift {
+  animation: slideIn_kf 1s linear;
+}
+@keyframes slideIn_kf {
+  0% {
+    transform: translate(-200%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+.indexvilma img {
+  animation: slideIn_kf 1s linear;
+}
+@keyframes slideIn_kf {
+  0% {
+    transform: translate(-200%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+/* gardin effekt på projektteaser */
+.projektsektion {
+  animation: gardin ease-out both 2s;
+  animation-timeline: view();
+  animation-range: 5% 40%;
+}
+
+@keyframes gardin {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/******************************** animation projekt side */
+
+/*slide in overskrift */
+.forsideh1 {
+  animation: slideIn_kf 1s linear;
+}
+@keyframes slideIn_kf {
+  0% {
+    transform: translate(-200%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+/* gardin effekt på projekter */
+.projekt-kort {
+  animation: gardin ease-out both 2s;
+  animation-timeline: view();
+  animation-range: 5% 40%;
+}
+
+@keyframes gardin {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/************************* animation om mig side */
+/* cirkler */
+.cirkel {
+  animation: eyebrowMove 2s infinite ease-in-out;
+}
+
+@keyframes eyebrowMove {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* op og ned */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* gardin effekt på udd og erhvervsafsnit */
+.om-udd {
+  animation: gardin ease-out both 2s;
+  animation-timeline: view();
+  animation-range: 5% 40%;
+}
+
+@keyframes gardin {
+  from {
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 /*************************************************************************/
