@@ -726,6 +726,11 @@ nav.active .menu a {
   font-size: 16px;
 }
 
+.tema5h1 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 /**********************************************************/
 /******************* footer *****************************/
 
