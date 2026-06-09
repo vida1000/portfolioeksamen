@@ -427,7 +427,7 @@ nav.active .menu a {
 .grid_1-1-1-1-1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp 1.5rem;
+  gap: 1.5rem;
   justify-items: center;
 }
 
