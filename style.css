@@ -81,6 +81,8 @@ select,
 /*baggrundsfarve */
 body {
   background-color: var(--color-bg);
+
+  overflow-x: hidden;
 }
 
 body p {
@@ -208,12 +210,11 @@ nav.active .menu a {
   position: relative;
   margin-top: 20px;
   font-family: var(--font-h1-family);
-  font-size: clamp(5rem, 14vw, 17.5rem);
   line-height: 0.75;
   color: var(--color-headline-bg);
-  letter-spacing: 0.2rem;
-
   z-index: 3;
+  font-size: clamp(3.2rem, 17vw, 5rem);
+  max-width: 100%;
 }
 
 .indexvilma p {
@@ -226,6 +227,7 @@ nav.active .menu a {
   width: 60%;
   justify-self: right;
   margin-top: -12%;
+  max-width: 100%;
 }
 
 /* om mig sektion */
@@ -286,6 +288,7 @@ nav.active .menu a {
 .indexgrid_1-2 p {
   color: var(--color-text);
   margin-top: 10px;
+  hyphens: auto;
 }
 
 /* cta teaser projekt knap */
@@ -330,8 +333,8 @@ nav.active .menu a {
 
 /* portrætbillede */
 .om-img {
-  width: 80%;
-  margin: 50px;
+  width: min(80%, 500px);
+  margin: 50px auto;
 }
 
 /* om mig afsnit */
@@ -372,7 +375,7 @@ nav.active .menu a {
 
 .om-udd h2 {
   font-family: Inter;
-  font-size: 26px;
+  font-size: 24px;
   color: white;
   text-align: center;
 }
@@ -382,6 +385,8 @@ nav.active .menu a {
   margin-inline: 50px;
   gap: 30px;
   color: white;
+  max-width: 100%;
+  padding-bottom: 50px;
 }
 
 .grid_1-1 li {
@@ -409,10 +414,6 @@ nav.active .menu a {
 
 /*  kompetencer */
 
-.kompetencer {
-  padding: 4rem 1.5rem;
-}
-
 .kompetencer h2 {
   text-align: center;
   color: var(--color-text);
@@ -424,7 +425,7 @@ nav.active .menu a {
 .grid_1-1-1-1-1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  gap: clamp 1.5rem;
   justify-items: center;
 }
 
@@ -723,162 +724,37 @@ nav.active .menu a {
   font-size: 16px;
 }
 
-/*************************** animationer / scroll funktioner ********************************/
-
-/* scroll i toppen*/
-html::before {
-  content: "";
-  inset: 0; /*indsætter noget tilfældigt og giver det en farve*/
-  position: fixed;
-  background-color: var(--color-red);
-  block-size: 4px; /*højden*/
-  animation: scroll-line linear both 2s;
-  animation-timeline: scroll();
-  transform-origin: 0 0;
-  z-index: 1000;
-}
-@keyframes scroll-line {
-  from {
-    scale: 0 1; /* vokser 0 i højden og 1 i siderne*/
-  }
-}
-
-/*****animationer forside *******/
-
-/* gardin effekt på om mig teaser forside */
-.ommigteaser {
-  animation: gardin ease-out both 2s;
-  animation-timeline: view();
-  animation-range: 5% 40%;
-}
-
-@keyframes gardin {
-  from {
-    opacity: 0;
-    clip-path: inset(0 100% 0 0);
-  }
-
-  to {
-    opacity: 1;
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-.indexgrid_1-2 {
-  animation: appear-1 ease-out both 2s;
-  animation-timeline: view();
-  animation-range: 10% 40%;
-}
-
-@keyframes appear-1 {
-  from {
-    /* Elementet starter usynligt */
-    opacity: 0;
-    /* Flytter elementet 20% af skærmbredden mod højre */
-    translate: 20vw;
-
-    /* Drejer elementet 10 grader mod højre */
-    rotate: 10deg;
-  }
-}
-
-/* slide in uddanelses og erhvervserfaring */
-.om-udd {
-  animation: gardin-hoejre ease-out both;
-  animation-timeline: view();
-  animation-range: 5% 30%;
-}
-
-@keyframes gardin-hoejre {
-  from {
-    opacity: 0;
-
-    /* starter ude til højre */
-    translate: 10vw;
-
-    /* skjult som et gardin */
-    clip-path: inset(0 100% 0 0);
-  }
-
-  to {
-    opacity: 1;
-
-    /* ender på normal position */
-    translate: 0;
-
-    /* hele elementet vises */
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-.mineprojekter article {
-  animation: gardin-hoejre ease-out both;
-  animation-timeline: view();
-  animation-range: 5% 30%;
-}
-
-@keyframes gardin-hoejre {
-  from {
-    opacity: 0;
-
-    /* starter ude til højre */
-    translate: 10vw;
-
-    /* skjult som et gardin */
-    clip-path: inset(0 100% 0 0);
-  }
-
-  to {
-    opacity: 1;
-
-    /* ender på normal position */
-    translate: 0;
-
-    /* hele elementet vises */
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-.cirkel {
-  animation: eyebrowMove 2s infinite ease-in-out;
-}
-
-@keyframes eyebrowMove {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* løfter brynet */
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 /**********************************************************/
 /******************* footer *****************************/
 
 footer {
   background-color: var(--color-red);
   padding-inline: 5px;
-  padding-block: 30px;
+  padding-block: 20px;
   font-family: Inter;
+  font-size: 0.85rem;
   margin-top: 130px;
+  color: white;
 }
 
-footer p {
+.footer-sektion p {
   color: white;
-  font-size: 20px;
 }
 
 .logofooter {
-  width: 77px;
-  height: 46px;
+  width: 60px;
+  height: auto;
   align-self: center;
 }
 
+.footer-sektion img {
+  width: 40px;
+  height: auto;
+  align-self: center;
+}
 .footer-sektion h3 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-size: 1rem;
   color: white;
 }
 
@@ -936,11 +812,10 @@ footer p {
   /* stor overskrift */
   .indexoverskrift {
     grid-column: 1/-1;
-    font-size: var(--font-h1-size);
-    max-width: 1200px;
+    font-size: 17.5rem;
     letter-spacing: 0.2rem;
+    max-width: 100%;
   }
-
   .indexvilma {
     grid-column: 2;
     width: 100%;
@@ -1029,6 +904,17 @@ footer p {
 
   /* uddannelse og erfaring afsnit */
 
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    margin-top: 50px;
+    margin-inline: 50px;
+    gap: 30px;
+    color: white;
+    max-width: 100%;
+  }
+
   .om-udd {
     margin-block: 100px;
     margin-inline: 70px;
@@ -1079,6 +965,10 @@ footer p {
 
   .cirkel p {
     font-size: 1.7rem;
+  }
+
+  .kompetencer {
+    padding: 4rem 1.5rem;
   }
 
   /************************************** mine projekter desktop *************************************/
@@ -1160,7 +1050,17 @@ footer p {
     border: 1px solid var(--color-red);
   }
 
-  .footer-sektion {
+  /**** footer ****/
+  footer {
+    font-size: 1rem;
     padding-inline: 20%;
+  }
+
+  .logofooter {
+    width: 77px;
+  }
+
+  .footer-sektion img {
+    width: 100%;
   }
 }

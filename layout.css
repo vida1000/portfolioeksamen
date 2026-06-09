@@ -20,11 +20,6 @@ header {
 }
 
 /* uddannelses og erhvervserfaring */
-.grid_1-1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-}
 
 .erhverv {
   grid-column: 1;
