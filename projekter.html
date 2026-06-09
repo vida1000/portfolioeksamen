@@ -26,394 +26,530 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div>
+                <a class="logo-btn" href="index.html"><img src="img/logo.webp" alt="logo"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="ommig.html">Om mig</a></li>
+                <li><a href="projekter.html" class="aktiv">Projekter</a></li>
+            </ul>
 
-    <body>
-        <header>
-            <nav>
+            <button class="burger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </nav>
+
+    </header>
+    <main>
+        <section class="projekthero">
+            <div class="circle"></div>
+            <h1 class="forsideh1">PRO<br>JEK<br>TER</h1>
+        </section>
+
+        <section class="mineprojekter">
+            <h2>MINE PROJEKTER</h2>
+
+            <!------- projekt 2 popover ------------->
+            <article class="projekt-kort projekt2-kort">
+
+                <img class="kvadrat" src="img-tema2/forside.webp" alt="Mobilsite projekt">
                 <div>
-                    <a class="logo-btn" href="index.html"><img src="img/logo.webp" alt="logo"></a>
+                    <h3>MOBILSITE</h3>
+                    <p>
+                        I tema 2 arbejdede jeg med grundlæggende HTML og CSS, hvor jeg lærte at opbygge et
+                        responsivt website med fokus på layout, navigation og brugeroplevelse.
+                    </p>
                 </div>
-                <ul class="menu">
-                    <li><a href="index.html">Forside</a></li>
-                    <li><a href="ommig.html">Om mig</a></li>
-                    <li><a href="projekter.html">Projekter</a></li>
-                </ul>
+                <button popovertarget="projekt-kort2_popover">Se projekt</button>
 
-                <button class="burger">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </button>
-            </nav>
+                <div id="projekt-kort2_popover" class="popup" popover>
+                    <button popovertarget="projekt-kort2_popover">Luk</button>
+                    <div class="temapopover">
 
-        </header>
-        <main>
-            <section class="projekthero">
-                <div class="circle"></div>
-                <h1 class="forsideh1">PRO<br>JEK<br>TER</h1>
-            </section>
-
-            <section class="mineprojekter">
-                <h2>MINE PROJEKTER</h2>
-
-                <!---------------- projekt 2 popover ------------->
-                <article class="projekt-kort projekt2-kort">
-                    <img src="img-tema2/forside.webp" alt="Mobilsite projekt">
-                    <div>
-                        <h3>MOBILSITE</h3>
-                        <p>
-                            I tema 2 arbejdede jeg med grundlæggende HTML og CSS, hvor jeg lærte at opbygge et
-                            responsivt website med fokus på layout, navigation og brugeroplevelse.
-                        </p>
-                    </div>
-                    <button popovertarget="projekt-kort2_popover">Se projekt</button>
-                    <div id="projekt-kort2_popover" popover>
-                        <button popovertarget="projekt-kort2_popover">Luk</button>
-                        <h1>Tema 2 <br>Mobilsite
+                        <h1> Tema 2 <br>Mobilsite
                         </h1>
-                        <div>
+                        <div class="sektion">
                             <img src="img-tema2/forside.webp" alt="forside">
-                            <h2>1. Løsning</h2>
-                            <p>Opgaven gik ud på at kode et website ud fra udleveret materiale samt en række krav og et
-                                eksempel på, hvordan det
-                                færdige website skulle se ud. Blandt andet skulle der indgå en menu, struktureret
-                                layout, en
-                                cta-knap, punktliste og at
-                                designet skulle være responsivt, alt sammen ved benyttelse af HTML og CSS.</p>
+                            <div>
+                                <h2>1. Løsning</h2>
+                                <p>Opgaven gik ud på at kode et website ud fra udleveret materiale samt en række
+                                    krav og
+                                    et
+                                    eksempel på, hvordan det
+                                    færdige website skulle se ud. Blandt andet skulle der indgå en menu,
+                                    struktureret
+                                    layout, en
+                                    cta-knap, punktliste og at
+                                    designet skulle være responsivt, alt sammen ved benyttelse af HTML og CSS.</p>
+                            </div>
                         </div>
-                        <div>
+
+
+
+                        <div class="sektion">
+
                             <img src="img-tema2/mobilversion.webp" alt="mobilversion">
-                            <h2>2. Proces</h2>
-                            <p>Jeg arbejdede med at strukturere websiderne i HTML og style dem med CSS, så layout,
-                                farver, billeder og typografi
-                                passede til det ønskede design. Til layoutet brugte jeg grid til at opdele og placere
-                                indholdet på siden på en
-                                overskuelig måde. <br> <br>
-                                Vi lærte også at opbygge en menu i HTML og style den med CSS ved hjælp af flex og
-                                position: sticky, så menuen blev
-                                liggende i toppen af siden under scrolling. Derudover lavede vi en punktliste ved hjælp
-                                af grid. Ved at tilføje classes
-                                til dl (description list) og div-elementerne i HTML kunne jeg bruge grid-row og
-                                grid-column til at placere elementerne
-                                præcist i layoutet.
-                                <br><br>
-                                Derudover arbejdede jeg med responsivt design ved hjælp af media queries, så websitet
-                                kunne tilpasse sig forskellige
-                                skærmstørrelser og fungere på både mobil og desktop.
-                            </p>
+                            <div>
+                                <h2>2. Proces</h2>
+                                <p>Jeg arbejdede med at strukturere websiderne i HTML og style dem med CSS, så
+                                    layout,
+                                    farver, billeder og typografi
+                                    passede til det ønskede design. Til layoutet brugte jeg grid til at opdele og
+                                    placere
+                                    indholdet på siden på en
+                                    overskuelig måde. <br> <br>
+                                    Vi lærte også at opbygge en menu i HTML og style den med CSS ved hjælp af flex
+                                    og
+                                    position: sticky, så menuen blev
+                                    liggende i toppen af siden under scrolling. Derudover lavede vi en punktliste
+                                    ved
+                                    hjælp
+                                    af grid. Ved at tilføje classes
+                                    til dl (description list) og div-elementerne i HTML kunne jeg bruge grid-row og
+                                    grid-column til at placere elementerne
+                                    præcist i layoutet.
+                                    <br><br>
+                                    Derudover arbejdede jeg med responsivt design ved hjælp af media queries, så
+                                    websitet
+                                    kunne tilpasse sig forskellige
+                                    skærmstørrelser og fungere på både mobil og desktop.
+                                </p>
+                            </div>
                         </div>
 
-                        <div>
+                        <div class="sektion">
                             <img src="img-tema2/komponenter.webp" alt="komponenter">
-                            <h2>3. Læring og refleksion</h2>
-                            <p>I tema 2 arbejdede jeg med grundlæggende webudvikling og fik en introduktion til de
-                                vigtigste værktøjer og metoder inden
-                                for frontend-design.
-                                <br> <br>
-                                Derudover arbejdede jeg med designprincipper og lærte, hvordan visuelle elementer som
-                                typografi, farver og opstilling
-                                har stor betydning for brugeroplevelsen.
-                                <br> <br>
-                                En vigtig del af projektet var at lære responsivt design. Jeg lærte at tilpasse websitet
-                                til forskellige skærmstørrelser
-                                som mobil, tablet og computer, så indholdet fungerede på alle enheder.
-                                <br> <br>
-                                Projektet gav mig en forståelse for, hvordan man opbygger et website fra bunden ved
-                                hjælp af HTML og CSS. Jeg lærte at
-                                strukturere websider i HTML og bruge CSS til at style tekst, billeder, farver og layout,
-                                så hjemmesiden blev mere
-                                overskuelig og brugervenlig.
-                            </p>
+                            <div>
+                                <div>
+                                    <h2>3. Læring og refleksion</h2>
+                                    <p>I tema 2 arbejdede jeg med grundlæggende webudvikling og fik en introduktion
+                                        til
+                                        de
+                                        vigtigste værktøjer og metoder inden
+                                        for frontend-design.
+                                        <br> <br>
+                                        Derudover arbejdede jeg med designprincipper og lærte, hvordan visuelle
+                                        elementer
+                                        som
+                                        typografi, farver og opstilling
+                                        har stor betydning for brugeroplevelsen.
+                                        <br> <br>
+                                        En vigtig del af projektet var at lære responsivt design. Jeg lærte at
+                                        tilpasse
+                                        websitet
+                                        til forskellige skærmstørrelser
+                                        som mobil, tablet og computer, så indholdet fungerede på alle enheder.
+                                        <br> <br>
+                                        Projektet gav mig en forståelse for, hvordan man opbygger et website fra
+                                        bunden
+                                        ved
+                                        hjælp af HTML og CSS. Jeg lærte at
+                                        strukturere websider i HTML og bruge CSS til at style tekst, billeder,
+                                        farver og
+                                        layout,
+                                        så hjemmesiden blev mere
+                                        overskuelig og brugervenlig.
+                                    </p>
+                                </div>
+                            </div>
+
+
                         </div>
-                        <a href="https://vida1000.github.io/website_v1_final/" target="_blank">Gå til sitet</a>
+                        <a class="website" href="https://vida1000.github.io/website_v1_final/" target="_blank">Gå
+                            til sitet</a>
                     </div>
-                </article>
+                </div>
+            </article>
 
 
 
 
-                <!---------------- projekt 3 popover ------------->
+            <!---------------- projekt 3 popover ------------->
 
-                <article class="projekt-kort projekt3-kort">
-                    <img src="img-tema3/emneforside.webp" alt="Emnesite projekt">
-                    <div>
-                        <h3>EMNESITE</h3>
-                        <p>
-                            I tema 3 udarbejdede jeg et yoga-website fra bunden.
+            <article class="projekt-kort projekt3-kort">
+                <img class="kvadrat" src="img-tema3/emneforside.webp" alt="Emnesite projekt">
+                <div>
+                    <h3>EMNESITE</h3>
+                    <p>
+                        I tema 3 udarbejdede jeg et yoga-website fra bunden.
 
-                            Jeg arbejdede blandt andet med Figma, responsivt design og interaktive elementer som
-                            burgermenu og galleri.
-                        </p>
-                    </div>
-                    <button popovertarget="projekt-kort3_popover">Se projekt</button>
-                    <div id="projekt-kort3_popover" popover>
-                        <button popovertarget="projekt-kort3_popover">Luk</button>
-                        <h1>Tema 2 <br>Mobilsite
+                        Jeg arbejdede blandt andet med Figma, responsivt design og interaktive elementer som
+                        burgermenu og galleri.
+                    </p>
+                </div>
+                <button popovertarget="projekt-kort3_popover">Se projekt</button>
+                <div id="projekt-kort3_popover" class="popup" popover>
+                    <button popovertarget="projekt-kort3_popover">Luk</button>
+
+                    <div class="temapopover">
+                        <h1>Tema 3 <br>Emnesite
                         </h1>
-                        <div>
+
+                        <div class="sektion">
                             <img src="img-tema3/emneforside.webp" alt="forside">
-                            <h2>1. Løsning</h2>
-                            <p>I tema 3 arbejdede jeg med at designe og udvikle et website om et selvvalgt emne. Opgaven
-                                omfattede hele processen fra
-                                idéudvikling og research til udarbejdelse af prototype, kodning i HTML, CSS og
-                                JavaScript samt efterfølgende test,
-                                præsentation og dokumentation. Jeg valgte at udvikle en hjemmeside om yoga med fokus på
-                                brugervenlighed og et design, der understøttede temaet. For at
-                                skabe den rette stemning arbejdede jeg med rolige farver, en enkel visuel stil og et
-                                overskueligt layout.
-                            </p>
+                            <div>
+                                <h2>1. Løsning</h2>
+                                <p>I tema 3 arbejdede jeg med at designe og udvikle et website om et selvvalgt emne.
+                                    Opgaven
+                                    omfattede hele processen fra
+                                    idéudvikling og research til udarbejdelse af prototype, kodning i HTML, CSS og
+                                    JavaScript samt efterfølgende test,
+                                    præsentation og dokumentation. Jeg valgte at udvikle en hjemmeside om yoga med
+                                    fokus
+                                    på
+                                    brugervenlighed og et design, der understøttede temaet. For at
+                                    skabe den rette stemning arbejdede jeg med rolige farver, en enkel visuel stil
+                                    og et
+                                    overskueligt layout.
+                                </p>
+                            </div>
                         </div>
-                        <div>
+
+
+
+
+                        <div class="sektion">
                             <img src="img-tema3/proces2emne.webp" alt="proces">
-                            <img src="img-tema3/Skærmbillede 2026-06-05 kl. 10.38.02.webp" alt="proces1">
-                            <h2>2. Proces</h2>
-                            <p>Jeg arbejdede med min research og idéudvikling i Figma og FigJam, hvor jeg samlede
-                                inspiration, noter og idéer til mit
-                                website om yoga. Her udviklede jeg også moodboards og styletiles, som var med til at
-                                skabe en tydelig visuel retning og
-                                en sammenhængende stemning for designet.
-                                (indsæt billeder af dokumationen fra figma)
-                                <br> <br>
-                                Derudover testede jeg mine designvalg og min digitale prototype på brugere for at
-                                undersøge, hvad der fungerede godt
-                                både visuelt og i forhold til brugeroplevelse (UX). Gennem disse tests og analyser fik
-                                jeg indsigt i, om mit design
-                                levede op til mine mål og visioner, samt hvilke områder der kunne forbedres.
-                            </p>
+                            <div>
+                                <h2>2. Proces</h2>
+                                <p>Jeg arbejdede med min research og idéudvikling i Figma og FigJam, hvor jeg
+                                    samlede
+                                    inspiration, noter og idéer til mit
+                                    website om yoga. Her udviklede jeg også moodboards og styletiles, som var med
+                                    til at
+                                    skabe en tydelig visuel retning og
+                                    en sammenhængende stemning for designet.
+                                    (indsæt billeder af dokumationen fra figma)
+                                    <br> <br>
+                                    Derudover testede jeg mine designvalg og min digitale prototype på brugere for
+                                    at
+                                    undersøge, hvad der fungerede godt
+                                    både visuelt og i forhold til brugeroplevelse (UX). Gennem disse tests og
+                                    analyser
+                                    fik
+                                    jeg indsigt i, om mit design
+                                    levede op til mine mål og visioner, samt hvilke områder der kunne forbedres.
+                                </p>
+                            </div>
                         </div>
 
-                        <div>
-                            <h2>3. Læring og refleksion</h2>
-                            <p>Efter jeg har arbejdet med hele design- og udviklingsprocessen fra idé til færdigt
-                                website, og jeg har fået en bedre
-                                forståelse for, hvordan de forskellige faser hænger sammen. Jeg startede med research og
-                                valg af emne (yoga), hvor jeg
-                                arbejdede med at definere målgruppe og formål, hvilket hjalp mig med at skabe en klar
-                                retning for projektet.
-                                <br> <br>
-                                Jeg har erfaret, at moodboards, wireframes og visuelle valg er vigtige for at omsætte
-                                idéer til et sammenhængende
-                                design. Arbejdet i Figma med en klikbar prototype gjorde det tydeligt for mig, hvor
-                                vigtigt brugerflow og test er, da
-                                det gav mulighed for at justere designet inden kodning.
-                                <br><br>
-                                I kodningsfasen har jeg fået erfaring med at bygge et responsivt website i HTML, CSS og
-                                JavaScript, og jeg har lært,
-                                hvor afgørende struktur og god planlægning er for et velfungerende resultat på tværs af
-                                skærmstørrelser. Gennem test og
-                                optimering har jeg desuden fået indsigt i, hvordan små ændringer kan forbedre både
-                                brugervenlighed og performance.
-                            </p>
+
+
+                        <div class="sektion">
+                            <img src="img-tema3/proces1.webp" alt="proces1">
+                            <div>
+                                <h2>3. Læring og refleksion</h2>
+                                <p>Efter jeg har arbejdet med hele design- og udviklingsprocessen fra idé til
+                                    færdigt
+                                    website, og jeg har fået en bedre
+                                    forståelse for, hvordan de forskellige faser hænger sammen. Jeg startede med
+                                    research og
+                                    valg af emne (yoga), hvor jeg
+                                    arbejdede med at definere målgruppe og formål, hvilket hjalp mig med at skabe en
+                                    klar
+                                    retning for projektet.
+                                    <br> <br>
+                                    Jeg har erfaret, at moodboards, wireframes og visuelle valg er vigtige for at
+                                    omsætte
+                                    idéer til et sammenhængende
+                                    design. Arbejdet i Figma med en klikbar prototype gjorde det tydeligt for mig,
+                                    hvor
+                                    vigtigt brugerflow og test er, da
+                                    det gav mulighed for at justere designet inden kodning.
+                                    <br><br>
+                                    I kodningsfasen har jeg fået erfaring med at bygge et responsivt website i HTML,
+                                    CSS
+                                    og
+                                    JavaScript, og jeg har lært,
+                                    hvor afgørende struktur og god planlægning er for et velfungerende resultat på
+                                    tværs
+                                    af
+                                    skærmstørrelser. Gennem test og
+                                    optimering har jeg desuden fået indsigt i, hvordan små ændringer kan forbedre
+                                    både
+                                    brugervenlighed og performance.
+                                </p>
+                            </div>
                         </div>
-                        <a href="https://vida1000.github.io/emnesite/" target="_blank">Gå til sitet</a>
 
+
+                        <a class="website" href="https://vida1000.github.io/emnesite/" target="_blank">Gå til
+                            sitet her</a>
 
                     </div>
-                </article>
+                </div>
+            </article>
 
 
 
-                <!---------------- projekt 4 popover ------------->
+            <!---------------- projekt 4 popover ------------->
 
-                <article class="projekt-kort projekt-kort4">
+            <article class="projekt-kort projekt-kort4">
 
-                    <img src="img-tema4/forsideemerg.webp" alt="Emergency site projekt">
+                <img class="kvadrat" src="img-tema4/forsideemerg.webp" alt="Emergency site projekt">
 
-                    <div>
-                        <h3>EMERGENCY SITE</h3>
-                        <p>
-                            I tema 4 videreudviklede jeg et emergency website, hvor jeg designede og kodede interaktive
-                            funktioner som infografik,
-                            formularer, dark mode og pop-over effekter.
-                        </p>
-                    </div>
-                    <button popovertarget="projekt-kort4_popover">Se projekt</button>
-                    <div id="projekt-kort4_popover" popover>
-                        <button popovertarget="projekt-kort4_popover">Luk</button>
+                <div>
+                    <h3>EMERGENCY SITE</h3>
+                    <p>
+                        I tema 4 videreudviklede jeg et emergency website, hvor jeg designede og kodede interaktive
+                        funktioner som infografik,
+                        formularer, dark mode og pop-over effekter.
+                    </p>
+                </div>
+                <button popovertarget="projekt-kort4_popover">Se projekt</button>
+                <div id="projekt-kort4_popover" class="popup" popover>
+                    <button popovertarget="projekt-kort4_popover">Luk</button>
+
+
+                    <div class="temapopover">
+
                         <h1>Tema 4 <br>Emergency site
                         </h1>
-                        <div>
+                        <div class="sektion">
                             <img src="img-tema4/forsideemerg.webp" alt="forside">
-                            <h2>1. Løsning</h2>
-                            <p>Jeg har arbejdet med at udvikle dele af et emergency website ud fra et eksisterende
-                                kodefundament. Jeg har selv valgt en
-                                nødsituation og bygget videre på sitet ved at designe og kode forskellige funktioner og
-                                sider. <br>
-                                I løbet af forløbet har jeg arbejdet med en infografik, en webformular, en forside og et
-                                dark mode, som alle er blevet
-                                integreret i mit site. <br> Jeg har brugt HTML, CSS og JavaScript samt Illustrator til
-                                at
-                                udvikle visuelle og interaktive
-                                elementer, der passer til mit valgte tema. Derudover har jeg lavet pop-over effekter og
-                                arbejdet med keyframes i CSS for
-                                at skabe animationer og mere dynamiske brugeroplevelser.
-                            </p>
-                        </div>
-                        <div>
-                            <img src="img-tema4/proces2emerg.webp" alt="proces1">
-                            <img src="img-tema4/procesemerg (2).webp" alt="proces2">
-                            <h2>2. Proces</h2>
-                            <p>I processen har jeg designet en infografik i Illustrator og efterfølgende implementeret
-                                den på sitet, hvor jeg har gjort
-                                den interaktiv med CSS og JavaScript. <br>
-                                Jeg har arbejdet med animationer på både artikler og SVG-infografik for at skabe mere
-                                dynamik på siden.
-                                Derudover har jeg implementeret dark mode, så designet kan skifte fra lys til mørk.
-                                Jeg har også lavet popover-effekter på forsiden, hvor artikler åbnes i et overlay ved
-                                klik på “Læs mere”, styret med
-                                HTML, CSS og JavaScript. <br>
-                                Til sidst har jeg udviklet en relevant tilmeldings-formular med forskellige inputtyper
-                                som checkboxes og radioknapper
-                                med fokus på struktur og brugervenlighed.
-
-                            </p>
+                            <div>
+                                <h2>1. Løsning</h2>
+                                <p>Jeg har arbejdet med at udvikle dele af et emergency website ud fra et
+                                    eksisterende
+                                    kodefundament. Jeg har selv valgt en
+                                    nødsituation og bygget videre på sitet ved at designe og kode forskellige
+                                    funktioner
+                                    og
+                                    sider. <br>
+                                    I løbet af forløbet har jeg arbejdet med en infografik, en webformular, en
+                                    forside
+                                    og et
+                                    dark mode, som alle er blevet
+                                    integreret i mit site. <br> Jeg har brugt HTML, CSS og JavaScript samt
+                                    Illustrator
+                                    til
+                                    at
+                                    udvikle visuelle og interaktive
+                                    elementer, der passer til mit valgte tema. Derudover har jeg lavet pop-over
+                                    effekter
+                                    og
+                                    arbejdet med keyframes i CSS for
+                                    at skabe animationer og mere dynamiske brugeroplevelser.
+                                </p>
+                            </div>
                         </div>
 
-                        <div>
 
-                            <h2>3. Læring og refleksion</h2>
-                            <p>Gennem arbejdet har jeg fået en bedre forståelse for, hvordan design og interaktivitet
-                                kan kombineres for at skabe en
-                                mere levende brugeroplevelse. Jeg har lært, hvordan JavaScript og CSS kan bruges til at
-                                gøre statisk indhold dynamisk,
-                                og hvordan små funktioner som animationer og overlays kan forbedre brugerens oplevelse.
-                                <br> Derudover har jeg fået erfaring
-                                med at arbejde mere struktureret med formularer og forstået vigtigheden af god opbygning
-                                og brugervenlighed.
-                            </p>
+                        <div class="sektion">
+                            <img src="img-tema4/proces2emerg.webp" alt="proces2">
+                            <div>
+                                <h2>2. Proces</h2>
+                                <p>I processen har jeg designet en infografik i Illustrator og efterfølgende
+                                    implementeret
+                                    den på sitet, hvor jeg har gjort
+                                    den interaktiv med CSS og JavaScript. <br>
+                                    Jeg har arbejdet med animationer på både artikler og SVG-infografik for at skabe
+                                    mere
+                                    dynamik på siden.
+                                    Derudover har jeg implementeret dark mode, så designet kan skifte fra lys til
+                                    mørk.
+                                    Jeg har også lavet popover-effekter på forsiden, hvor artikler åbnes i et
+                                    overlay
+                                    ved
+                                    klik på “Læs mere”, styret med
+                                    HTML, CSS og JavaScript. <br>
+                                    Til sidst har jeg udviklet en relevant tilmeldings-formular med forskellige
+                                    inputtyper
+                                    som checkboxes og radioknapper
+                                    med fokus på struktur og brugervenlighed.
+
+                                </p>
+                            </div>
                         </div>
-                        <a href="https://vida1000.github.io/emergency-site/" target="_blank">Gå til sitet</a>
 
+                        <div class="sektion">
+                            <img src="img-tema4/proces1.webp" alt="proces1">
+                            <div>
+                                <h2>3. Læring og refleksion</h2>
+                                <p>Gennem arbejdet har jeg fået en bedre forståelse for, hvordan design og
+                                    interaktivitet
+                                    kan kombineres for at skabe en
+                                    mere levende brugeroplevelse. Jeg har lært, hvordan JavaScript og CSS kan bruges
+                                    til
+                                    at
+                                    gøre statisk indhold dynamisk,
+                                    og hvordan små funktioner som animationer og overlays kan forbedre brugerens
+                                    oplevelse.
+                                    <br> Derudover har jeg fået erfaring
+                                    med at arbejde mere struktureret med formularer og forstået vigtigheden af god
+                                    opbygning
+                                    og brugervenlighed.
+                                </p>
+                            </div>
+                        </div>
+
+                        <a class="website" href="https://vida1000.github.io/emergency-site/" target="_blank">Gå til
+                            sitet her</a>
                     </div>
-                </article>
+                </div>
+            </article>
 
 
 
-                <!---------------- projekt 5 popover ------------->
+            <!---------------- projekt 5 popover ------------->
 
 
 
-                <article class="projekt-kort projekt-kort5">
-                    <img src="img-tema5/forsidetanken.webp" alt="Virksomhedssite projekt">
-                    <div>
-                        <h3>VIRKSOMHEDSSITE</h3>
-                        <p>
-                            I tema 5 arbejdede vi i grupper med redesign af 'Tanken’s hjemmeside gennem research,
-                            idéudvikling, indholdsproduktion
-                            og kodning. Projektet gav erfaring med både samarbejde, kundekontakt og frontend-udvikling.
-                        </p>
-                    </div>
-                    <button popovertarget="projekt-kort5_popover">Se projekt</button>
-                    <div id="projekt-kort5_popover" popover>
-                        <button popovertarget="projekt-kort5_popover">Luk</button>
+            <article class="projekt-kort projekt-kort5">
+                <img class="kvadrat" src="img-tema5/forsidetanken.webp" alt="Virksomhedssite projekt">
+                <div>
+                    <h3>VIRKSOMHEDSSITE</h3>
+                    <p>
+                        I tema 5 arbejdede vi i grupper med redesign af 'Tanken’s hjemmeside gennem research,
+                        idéudvikling, indholdsproduktion
+                        og kodning. Projektet gav erfaring med både samarbejde, kundekontakt og frontend-udvikling.
+                    </p>
+                </div>
+                <button popovertarget="projekt-kort5_popover">Se projekt</button>
+                <div id="projekt-kort5_popover" class="popup" popover>
+                    <button popovertarget="projekt-kort5_popover">Luk</button>
+
+
+                    <div class="temapopover">
                         <h1>Tema 5 <br>Virksomhedssite
                         </h1>
-                        <div>
+                        <div class="sektion">
                             <img src="img-tema5/forsidetanken.webp" alt="forside">
-                            <h2>1. Løsning</h2>
-                            <p>I tema 5 arbejdede vi med redesign af en eksisterende virksomheds hjemmeside gennem et
-                                gruppeprojekt.
-                                Formålet var at skabe et mere moderne, brugervenligt og visuelt opdateret website, som
-                                passede bedre til virksomhedens
-                                identitet og målgruppe.
-                                Derudover skulle sitet indeholde indholdsproduktion i form af blandt andet tekst,
-                                billeder og visuelle elementer.
-                            </p>
-                        </div>
-                        <div>
-                            <img src="img-tema5/tankenp1.webp" alt="proces">
-                            <img src="img-tema5/tankenp2.webp" alt="proces2">
-                            <img src="img-tema5/proces3.webp" alt="proces3">
-                            <h2>2. Proces</h2>
-                            <p>Vi startede projektet med at opsætte et Scrumboard for at skabe struktur og overblik over
-                                planlægning, opgaver og
-                                udviklingsprocessen.
-                                <br><br>
-                                Herefter satte vi projektet i gang med research og tæt kommunikation med virksomheden.
-                                Gennem interviews fik vi en bedre
-                                forståelse af deres behov, ønsker og målgruppe, hvilket dannede grundlag for det videre
-                                arbejde.
-                                Efterfølgende arbejdede vi med idéudvikling og design i Figma, hvor vi udviklede
-                                wireframes, moodboards og flere
-                                forskellige prototyper for løbende at teste og forbedre designet.
-                                <br><br>
-                                Under hele processen dokumenterede vi vores arbejde og samarbejdede løbende om både
-                                design og udvikling. Vi producerede
-                                desuden indhold til hjemmesiden, herunder billeder og tekst, for at skabe et mere
-                                professionelt og sammenhængende
-                                udtryk.
-                                <br><br>
-                                Da designet var på plads, begyndte vi kodningen af hjemmesiden med HTML og CSS. Vi
-                                brugte GitHub til versionsstyring og
-                                samarbejdede gennem branches og merges, hvilket gav en mere struktureret arbejdsproces.
-                                Til sidst testede vi hjemmesiden og præsenterede det færdige redesign.
-                            </p>
+                            <div>
+                                <h2>1. Løsning</h2>
+                                <p>I tema 5 arbejdede vi med redesign af en eksisterende virksomheds hjemmeside
+                                    gennem
+                                    et
+                                    gruppeprojekt.
+                                    Formålet var at skabe et mere moderne, brugervenligt og visuelt opdateret
+                                    website,
+                                    som
+                                    passede bedre til virksomhedens
+                                    identitet og målgruppe.
+                                    Derudover skulle sitet indeholde indholdsproduktion i form af blandt andet
+                                    tekst,
+                                    billeder og visuelle elementer.
+                                </p>
+                            </div>
                         </div>
 
-                        <div>
-                            <h2>3. Læring og refleksion</h2>
-                            <p>Gennem temaet har jeg fået erfaring med hele redesign-processen og lært, hvordan man
-                                arbejder professionelt med
-                                udvikling af websites i grupper. Jeg har blandt andet lært om planlægning,
-                                projektstyring, research, idéudvikling og
-                                digital prototyping. <br>
-                                Derudover har jeg fået erfaring med indholdsproduktion, hvor vi arbejdede med billeder,
-                                tekst og visuelle elementer til
-                                hjemmesiden. Nogle fra gruppen stod også for at producere billeder og video til sitet,
-                                hvilket var med til at give
-                                hjemmesiden et mere professionelt og levende udtryk. Jeg har også lært mere om
-                                brugeroplevelse og hvordan man designer
-                                et website, der både fungerer godt og passer til virksomhedens målgruppe.
-                                En stor del af forløbet handlede også om samarbejde og kommunikation – både internt i
-                                gruppen og med virksomheden. <br>Jeg har derfor fået en bedre forståelse for, hvor
-                                vigtigt god kommunikation og struktur er i
-                                større projekter.
-                                Temaet har samtidig styrket mine tekniske færdigheder inden for frontend-udvikling og
-                                givet mig erfaring med GitHub,
-                                branches og merge, som er vigtige værktøjer i moderne webudvikling.
 
-                            </p>
+                        <div class="sektion">
+                            <img src="img-tema5/tankenp2.webp" alt="forside">
+                            <div>
+                                <h2>2. Proces</h2>
+                                <p>Vi startede projektet med at opsætte et Scrumboard for at skabe struktur og
+                                    overblik
+                                    over
+                                    planlægning, opgaver og
+                                    udviklingsprocessen.
+                                    <br><br>
+                                    Herefter satte vi projektet i gang med research og tæt kommunikation med
+                                    virksomheden.
+                                    Gennem interviews fik vi en bedre
+                                    forståelse af deres behov, ønsker og målgruppe, hvilket dannede grundlag for det
+                                    videre
+                                    arbejde.
+                                    Efterfølgende arbejdede vi med idéudvikling og design i Figma, hvor vi udviklede
+                                    wireframes, moodboards og flere
+                                    forskellige prototyper for løbende at teste og forbedre designet.
+                                    <br><br>
+                                    Under hele processen dokumenterede vi vores arbejde og samarbejdede løbende om
+                                    både
+                                    design og udvikling. Vi producerede
+                                    desuden indhold til hjemmesiden, herunder billeder og tekst, for at skabe et
+                                    mere
+                                    professionelt og sammenhængende
+                                    udtryk.
+                                    <br><br>
+                                    Da designet var på plads, begyndte vi kodningen af hjemmesiden med HTML og CSS.
+                                    Vi
+                                    brugte GitHub til versionsstyring og
+                                    samarbejdede gennem branches og merges, hvilket gav en mere struktureret
+                                    arbejdsproces.
+                                    Til sidst testede vi hjemmesiden og præsenterede det færdige redesign.
+                                </p>
+                            </div>
                         </div>
-                        <a href="https://carolinehay.github.io/Tanken_done/" target="_blank">Gå til sitet</a>
 
+                        <div class="sektion">
+                            <img src="img-tema5/tankenp2.webp" alt="proces">
+                            <div>
+                                <h2>3. Læring og refleksion</h2>
+                                <p>Gennem temaet har jeg fået erfaring med hele redesign-processen og lært, hvordan
+                                    man
+                                    arbejder professionelt med
+                                    udvikling af websites i grupper. Jeg har blandt andet lært om planlægning,
+                                    projektstyring, research, idéudvikling og
+                                    digital prototyping. <br>
+                                    Derudover har jeg fået erfaring med indholdsproduktion, hvor vi arbejdede med
+                                    billeder,
+                                    tekst og visuelle elementer til
+                                    hjemmesiden. Nogle fra gruppen stod også for at producere billeder og video til
+                                    sitet,
+                                    hvilket var med til at give
+                                    hjemmesiden et mere professionelt og levende udtryk. Jeg har også lært mere om
+                                    brugeroplevelse og hvordan man designer
+                                    et website, der både fungerer godt og passer til virksomhedens målgruppe.
+                                    En stor del af forløbet handlede også om samarbejde og kommunikation – både
+                                    internt
+                                    i
+                                    gruppen og med virksomheden. <br>Jeg har derfor fået en bedre forståelse for,
+                                    hvor
+                                    vigtigt god kommunikation og struktur er i
+                                    større projekter.
+                                    Temaet har samtidig styrket mine tekniske færdigheder inden for
+                                    frontend-udvikling
+                                    og
+                                    givet mig erfaring med GitHub,
+                                    branches og merge, som er vigtige værktøjer i moderne webudvikling.
 
+                                </p>
 
-
-
-
+                            </div>
+                        </div>
+                        <a class="website" href="https://carolinehay.github.io/Tanken_done/" target="_blank">Gå til
+                            sitet her</a>
 
                     </div>
-                </article>
-            </section>
-        </main>
+                </div>
+            </article>
+        </section>
+    </main>
 
-        <footer>
-            <div class="footer-sektion">
-                <div class="kontaktoplysninger">
-                    <h3> Kontakt mig her:</h3>
-                    <p>+45 25 61 49 39</p>
-                    <a href="vilmavbddanielsen02@gmail.com">vilmavbddanielsen02 <br>@gmail.com</a>
-                </div>
-                <div class="logofooter">
-                    <a href="index.html"><img src="img/logowhite.webp" alt="logo"></a>
-                </div>
-                <div>
-                    <h3>Sociale medier:</h3>
-                    <div class="medierikoner">
-                        <div><a href="https://www.instagram.com/vilmabaltzer/"><img src="img/ig-logo.svg"
-                                    alt="insta"></a>
-                        </div>
-                        <div><a href="https://www.facebook.com/profile.php?id=100009377991210&locale=da_DK"><img
-                                    src="img/fb-logo.svg" alt="fb"></a>
-                        </div>
+    <footer>
+        <div class="footer-sektion">
+            <div class="kontaktoplysninger">
+                <h3> Kontakt mig her:</h3>
+                <p>+45 25 61 49 39</p>
+                <a href="mailto:vilmavbddanielsen02@gmail.com">
+                    vilmavbddanielsen02 <br> @gmail.com
+                </a>
+            </div>
+            <div class="logofooter">
+                <a href="index.html"><img src="img/logowhite.webp" alt="logo"></a>
+            </div>
+            <div>
+                <h3>Sociale medier:</h3>
+                <div class="medierikoner">
+                    <div><a href="https://www.instagram.com/vilmabaltzer/" target="_blank"><img src="img/ig-logo.svg"
+                                alt="insta"></a>
+                    </div>
+                    <div><a href="https://www.facebook.com/profile.php?id=100009377991210&locale=da_DK"
+                            target="_blank"><img src="img/fb-logo.svg" alt="fb"></a>
                     </div>
                 </div>
-
             </div>
 
-        </footer>
-        <script src="menu.js"></script>
-    </body>
+        </div>
+
+    </footer>
+    <script src="menu.js"></script>
 
 </body>
 
